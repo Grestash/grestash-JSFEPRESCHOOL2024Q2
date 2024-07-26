@@ -1,0 +1,485 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    color: #545454;
+    overflow: hidden;
+}
+
+.header-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 30px 40px;
+}
+
+.header {
+    width: 1200px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 100%;
+}
+
+.logo-link {
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+    transform: scale(1.05);
+}
+
+
+.logo-title {
+    font-family: Georgia;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 35.2px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    color: #545454;
+    margin-bottom: 10px;
+}
+
+.logo-subtitle {
+    color: #292929;
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 14.95px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    margin-left: 4px;
+
+}
+
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    display: flex;
+    height: 27px;
+
+}
+
+.nav-item {
+    margin-right: 35px;
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+
+.nav-item a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #545454;
+}
+
+.nav-item a:hover {
+    color: #292929;
+}
+
+.nav-item-active {
+    color: #292929;
+    border-bottom: 3px solid #F1CDB3;
+    padding-bottom: 4px;
+}
+
+.pets {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #F6F6F6;
+}
+
+.pets-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pets-content-heading {
+    font-family: Georgia;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 45.5px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    height: 90px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.pets-content-slider {
+    max-width: 1200px;
+    margin-top: 45px;
+}
+
+.cards-container {
+    max-width: 1200px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 270px);
+    column-gap: 40px;
+    row-gap: 30px;
+}
+
+.pets-content-slider-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FAFAFA;
+    border-radius: 9px;
+    transition: 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pets-content-slider-card:hover {
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    cursor: pointer;
+    transform: scale(1.02);
+
+    .pets-content-slider-card-button {
+        background-color: #FDDCC4;
+        outline: none;
+        border: 0;
+    }
+}
+
+.pets-content-slider-card-name {
+    font-family: Georgia;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22.72px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    margin: 30px auto;
+
+}
+
+.pets-content-slider-card-button {
+    font-family: Georgia;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 22.1px;
+    letter-spacing: 0.06em;
+    border-radius: 100px;
+    padding: 15px, 45px, 15px, 45px;
+    width: 187px;
+    height: 52px;
+    background-color: #FAFAFA;
+    border: 2px solid #F1CDB3;
+    margin-bottom: 30px;
+}
+
+.pets-content-nav {
+    display: flex;
+    column-gap: 20px;
+    margin-top: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 340px;
+}
+
+.button-paginator {
+    width: 52px;
+    height: 52px;
+    border-radius: 100px;
+    border: 2px solid #F1CDB3;
+    opacity: 0px;
+}
+
+.button-paginator:hover {
+    background-color: #F1CDB3;
+    cursor: pointer;
+}
+
+.button-paginator-text {
+    font-family: Georgia;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    max-width: 27px;
+    margin: 0 auto;
+}
+
+.button-paginator-active {
+    width: 52px;
+    height: 52px;
+    border-radius: 100px;
+    background-color: #F1CDB3;
+    border: none;
+    outline: none;
+}
+
+.button-paginator-inactive {
+    width: 52px;
+    height: 52px;
+    border-radius: 100px;
+    border: 2px solid #CDCDCD;
+}
+
+.button-paginator-inactive-text {
+    color: #CDCDCD;
+    font-family: Georgia;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.footer {
+    background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%);
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.footer-content {
+    display: flex;
+    column-gap: 160px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.footer-content-contacts{
+    max-width: 279px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    max-height: 234px;
+    margin-top: 16px;
+}
+
+.footer-contacts-title {
+    font-family: Georgia;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 45.5px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    color: #FFFFFF;
+
+}
+
+.footer-contacts-mail {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.footer-contacts-mail-text {
+    font-family: Georgia;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    color: #F1CDB3;
+
+}
+
+.footer-contacts-mail:hover .footer-contacts-mail-text {
+    text-decoration: underline;
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+
+.footer-contacts-phone {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.footer-contacts-phone-text {
+    font-family: Georgia;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    color: #F1CDB3;
+}
+
+.footer-contacts-phone:hover .footer-contacts-phone-text {
+    text-decoration: underline;
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.footer-content-location {
+    max-width: 302px;
+    display: flex;
+    flex-direction: column;
+    max-height: 234px;
+    margin-top: 16px;
+    row-gap: 34px;
+}
+
+.footer-location-title {
+    font-family: Georgia;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 45.5px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.footer-location-boston {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.footer-location-boston-text {
+    font-family: Georgia;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    color: #F1CDB3;
+}
+
+.footer-location-boston:hover .footer-location-boston-text {
+    text-decoration: underline;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.footer-location-london {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.footer-location-london-text {
+    font-family: Georgia;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    color: #F1CDB3;
+}
+
+.footer-location-london:hover .footer-location-london-text {
+    text-decoration: underline;
+    transform: scale(1.02);
+    cursor: pointer;
+}
