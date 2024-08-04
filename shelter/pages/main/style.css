@@ -106,20 +106,21 @@ margin-bottom: 10px;
 }
 
 
-.nav-item a {
+.nav-item a{
     text-decoration: none;
-    cursor: pointer;
     color: #CDCDCD;
 }
 
 .nav-item a:hover {
     color: #FAFAFA;
+    cursor: pointer;
 }
 
-.nav-item-active {
+.nav-item a.active {
     color: #FAFAFA;
     border-bottom: 3px solid #F1CDB3;
     padding-bottom: 4px;
+    cursor: default;
 }
 
 .not-only {
@@ -331,6 +332,10 @@ margin-bottom: 10px;
     background-color: #FAFAFA;
     border: 2px solid #F1CDB3;
     margin-bottom: 30px;
+}
+
+.pets-content-slider-card-button:hover {
+    cursor: pointer;
 }
 
 .pets-content-button {
