@@ -85,6 +85,10 @@ margin-bottom: 10px;
     transform: scale(1.05);
 }
 
+.burger-icon {
+    display: none;
+}
+
 .nav-list {
     list-style: none;
     display: flex;
@@ -798,5 +802,284 @@ margin-bottom: 10px;
         margin-top: 65px;
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+
+@media (max-width: 320px) {
+    nav {
+        display: none;
+    }
+    .burger-icon {
+        display: block;
+    }
+    .header {
+        max-width: 280px;
+    }
+    .start-screen {
+        padding-left: 10px;
+        padding-right: 10px;
+        min-height: 793px;
+    }
+
+   .container {
+    max-width: 300px;
+   }
+    .not-only-text {
+        max-width: 300px;
+        margin-bottom: 105px;
+    }
+    .not-only-text-heading {
+        font-family: Georgia;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 32.5px;
+        letter-spacing: 0.06em;
+        text-align: center;
+
+    }
+    .not-only-text-subheading {
+        text-align: center;
+    }
+    .not-only-img {
+        max-width: 260px;
+        max-height: 271.77px;
+    }
+    .about {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 42px;
+        padding-bottom: 42px;
+    }
+    .about-content-text-heading {
+        font-family: Georgia;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 32.5px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about-content {
+        max-width: 300px;
+    }
+    .about-content-text {
+        max-width: 300px;
+        min-height: 494px;
+        margin-bottom: 42px;
+    }
+    .about-content-text-subheading-1 {
+        max-width: 270px;
+        margin-left:  auto;
+        margin-right: auto;
+        text-align: justify;
+    }
+    .about-content-text-subheading-2 {
+        max-width: 270px;
+        text-align: justify;
+        margin-left:  auto;
+        margin-right: auto;
+    }
+    .about-content-img {
+        max-width: 260px;
+        max-height: 353px;
+        margin-top: 0;
+    }
+    .pets {
+        padding: 42px 10px;
+        max-height: 791px;
+    }
+    .pets-content-heading {
+        font-family: Georgia;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 32.5px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        max-height: 64px;
+        min-width: 300px;
+    }
+    .pets-content-slider {
+        flex-wrap: wrap;
+        margin-top: 42px;
+    }
+    .pets-content-slider-card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .button-arrow {
+        order: 1;
+    }
+    .button-arrow.left {
+        margin-left: 58px;
+        margin-top: 20px;
+    }
+    .button-arrow.right {
+        margin-right: 58px;
+        margin-top: 20px;
+    }
+    .pets-content-button {
+        margin-top: 42px;
+    }
+    .help {
+        padding: 42px 15px;
+    }
+    .help-content-heading {
+        font-family: Georgia;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 32.5px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        max-width: 222px;
+        max-height: 64px;
+
+    }
+    .help-content-list {
+        max-width: 290px;
+        max-height: 555px;
+        margin-top: 42px;
+        gap: 30px 30px;
+
+    }
+    .help-content-list-item {
+        max-width: 130px;
+        max-height: 87px;
+    }
+    .list-item-icon {
+        max-width: 50px;
+        max-height: 50px;
+        margin-bottom: 20px;
+    }
+    .list-item-title {
+        font-family: Georgia;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 16.5px;
+        letter-spacing: 0.06em;
+        text-align: center;
+
+    }
+    .help-content-list-item:last-child {
+        margin-right: auto;
+     }
+
+    .donation {
+        padding: 42px 10px;
+    }
+    .donation-heading {
+        font-family: Georgia;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 32.5px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        max-height: 64px;
+        max-width: 220px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .donation-content-text {
+        max-width: 300px;
+    }
+    .donation-subheading {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 273px;
+        max-height: 24px;
+        font-family: Georgia;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        letter-spacing: normal;
+
+    }
+    .credit-card-content-numbers-link {
+        font-family: Georgia;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 16.5px;
+        letter-spacing: 0.06em;
+        text-align: left;
+        max-height: 23px;
+
+    }
+    .donation-content-img {
+        margin-right: 15px;
+    }
+    .credit-card {
+        max-width: 251px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .donation-text {
+        max-width: 280px;
+        max-height: 90px;
+        font-family: Arial;
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 18px;
+        text-align: justify;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .donation-content-img {
+        max-width: 260px;
+        max-height: 135px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 42px;
+    }
+    .footer {
+        padding: 30px 10px 0px 10px;
+    }
+    .footer-content-wrapper {
+        flex-direction: column;
+        row-gap: 40px;
+        max-height: 470px;
+    }
+    .footer-content-contacts {
+        margin: 0 auto;
+    }
+    .footer-contacts-title {
+        font-family: Georgia;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 32.5px;
+        letter-spacing: 0.06em;
+        text-align: center;
+
+    }
+    .footer-content-location {
+        margin: 0 auto;
+    }
+    .footer-location-title {
+        font-family: Georgia;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 32.5px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        max-width: 270px;
+        max-height: 64px;
+        margin: 0 auto;
+    }
+    .footer-content-location {
+        row-gap: 40px;
+    }
+    .footer-content-img {
+        max-width: 260px;
+        max-height: 269px;
+        margin-top: 0;
+
+    }
+    .footer-content {
+        row-gap: 40px;
     }
 }
