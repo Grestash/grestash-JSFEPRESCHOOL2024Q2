@@ -107,7 +107,7 @@ a {
 }
 
 .header {
-    width: 1200px;
+    max-width: 1200px;
     height: 60px;
     display: flex;
     align-items: center;
@@ -149,6 +149,10 @@ a {
     text-align: left;
     margin-left: 4px;
 
+}
+
+.burger-icon {
+    display: none;
 }
 
 
@@ -492,6 +496,24 @@ a {
     text-decoration: underline;
     transform: scale(1.02);
     cursor: pointer;
+}
+
+@media (max-width: 1280px) {
+    .cards-container {
+        max-width: 890px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 270px);
+        column-gap: 40px;
+        row-gap: 30px;
+        padding: 0;
+    }
+    .pets-content-slider-card:nth-last-child(1) {
+        display: none;
+    }
+    .pets-content-slider-card:nth-last-child(2) {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
