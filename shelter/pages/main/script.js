@@ -1,1 +1,1 @@
-console.log("The work was completed 100/100.");
+console.log("The work completed 80/100")
