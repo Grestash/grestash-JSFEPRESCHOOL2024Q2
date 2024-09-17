@@ -1,6 +1,13 @@
+* {
+    margin: 0;
+}
 
 body {
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 #background {
@@ -12,4 +19,47 @@ body {
     left: 0;
     filter: blur(4px);
     z-index: -1;
+}
+
+.audio-player {
+        background: #fff;
+        padding: 10px;
+        border-radius: 7px;
+        text-align: center;
+}
+
+#cover_image {
+    border-radius: 7px;
+}
+
+#play-pause {
+    background: #fff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#seek-bar {
+    width: 100%;
+    margin: 10px 0;
+}
+
+#next-icon {
+    height: 30px;
+    width: 30px;
+    transform: rotate(180deg);
+}
+
+#previous-icon {
+    height: 30px;
+    width: 30px;
+
+}
+
+#play-icon {
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
 }
