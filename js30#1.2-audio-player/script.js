@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
             audio.src = tracks[playNum];
             audio.play();
         } else {
-            playNum = 0;
+            playNum = 0;g
             audio.src = tracks[playNum];
             audio.play();
         }
