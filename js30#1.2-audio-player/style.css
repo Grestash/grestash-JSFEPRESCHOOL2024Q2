@@ -22,14 +22,16 @@ body {
 }
 
 .audio-player {
-        background: #fff;
-        padding: 10px;
-        border-radius: 7px;
-        text-align: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 7px;
+    text-align: center;
 }
 
 #cover_image {
     border-radius: 7px;
+    height: 300px;
+    width: 300px;
 }
 
 #play-pause {
