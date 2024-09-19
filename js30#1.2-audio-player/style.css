@@ -28,10 +28,20 @@ body {
     text-align: center;
 }
 
+.container {
+    width: 300px;
+
+}
+
+.song-name {
+    text-align: left;
+}
+
 #cover_image {
     border-radius: 7px;
     height: 300px;
     width: 300px;
+    margin-bottom: 30px;
 }
 
 #play-pause {
@@ -41,6 +51,10 @@ body {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.controls-buttons {
+    
 }
 
 #seek-bar {
