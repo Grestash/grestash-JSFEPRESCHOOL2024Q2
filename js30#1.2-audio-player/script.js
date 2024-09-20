@@ -136,4 +136,3 @@ document.addEventListener("DOMContentLoaded", function () {
     return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
   }
 });
- .
