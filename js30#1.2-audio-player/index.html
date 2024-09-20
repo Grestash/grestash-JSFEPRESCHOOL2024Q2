@@ -20,22 +20,21 @@
                 <img src="assets/img/Utopia_small.png" alt="Utopia" id="cover_image">
             </div>
             <div class="song-name">
-                <div class="song-title">My eyes</div>
-                <div class="song-artist">Travis Scott</div>
+                <div id="song-title">My eyes</div>
+                <div id="song-artist">Travis Scott</div>
             </div>
+
+            <input type="range" id="timeline" value="0" max="100">
+            <div class="song-time">
+                <span id="current-time">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+
             <div class="controls-box">
-                <div class="controls-buttons">
-                    <button id="play-prev-button"><img src="assets/icons/arrow.png" alt="arrow"
-                        id="previous-icon"></button>
-                    <button id="play-pause"><img src="assets/icons/play.png" alt="play" id="play-icon"
-                            class="play-pause-img"></button>
-                    <button id="play-next-button"><img src="assets/icons/arrow.png" alt="arrow" id="next-icon"></button>
-                </div>
-
-
-                <input type="range" id="timeline" value="0">
-                <span id="current-time">0:00</span> / <span id="duration">0:00</span>
-
+                <button id="play-prev-button"><img src="assets/icons/arrow.png" alt="arrow" id="previous-icon"></button>
+                <button id="play-pause"><img src="assets/icons/play.png" alt="play" id="play-icon"
+                        class="play-pause-img"></button>
+                <button id="play-next-button"><img src="assets/icons/arrow.png" alt="arrow" id="next-icon"></button>
             </div>
         </div>
     </div>

@@ -6,12 +6,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const durationText = document.getElementById("duration");
   const play_next_button = document.getElementById("play-next-button");
   const play_prev_button = document.getElementById("play-prev-button");
+  const songTitle = document.getElementById("song-title");
+  const songArtist = document.getElementById("song-artist");
   const tracks = [
     "assets/music/Travis_Scott-My_eyes.mp3",
     "assets/music/Gunna-One_Of_Wun.mp3",
   ];
   const background = ["assets/img/Utopia.jpg", "assets/img/Gunna.jpg"];
   const covers = ["assets/img/Utopia_small.png", "assets/img/Gunna_small.jpg"];
+  const titles = ["My eyes", "One of Wun"];
+  const artists = ["Travis Scott", "Gunna"];
   let playNum = 0;
   const backgroundImage = document.getElementById("background");
   const coverImage = document.getElementById("cover_image");
@@ -41,6 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
       audio.src = tracks[playNum];
       backgroundImage.src = background[playNum];
       coverImage.src = covers[playNum];
+      songTitle.innerText = titles[playNum];
+      songArtist.innerText = artists[playNum];
 
       play_pause_button.innerHTML =
         '<img src="assets/icons/pause.png" alt="pause" id="pause-icon" class="play-pause-img">';
@@ -52,6 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
       audio.src = tracks[playNum];
       backgroundImage.src = background[playNum];
       coverImage.src = covers[playNum];
+      songTitle.innerText = titles[playNum];
+      songArtist.innerText = artists[playNum];
 
       play_pause_button.innerHTML =
         '<img src="assets/icons/pause.png" alt="pause" id="pause-icon" class="play-pause-img">';
@@ -67,6 +75,8 @@ document.addEventListener("DOMContentLoaded", function () {
       audio.src = tracks[playNum];
       backgroundImage.src = background[playNum];
       coverImage.src = covers[playNum];
+      songTitle.innerText = titles[playNum];
+      songArtist.innerText = artists[playNum];
       play_pause_button.innerHTML =
         '<img src="assets/icons/pause.png" alt="pause" id="pause-icon" class="play-pause-img">';
       isPlay = true;
@@ -76,6 +86,8 @@ document.addEventListener("DOMContentLoaded", function () {
       audio.src = tracks[playNum];
       backgroundImage.src = background[playNum];
       coverImage.src = covers[playNum];
+      songTitle.innerText = titles[playNum];
+      songArtist.innerText = artists[playNum];
       play_pause_button.innerHTML =
         '<img src="assets/icons/pause.png" alt="pause" id="pause-icon" class="play-pause-img">';
       isPlay = true;
@@ -89,12 +101,16 @@ document.addEventListener("DOMContentLoaded", function () {
       audio.src = tracks[playNum];
       backgroundImage.src = background[playNum];
       coverImage.src = covers[playNum];
+      songTitle.innerText = titles[playNum];
+      songArtist.innerText = artists[playNum];
       audio.play();
     } else {
       playNum = 0;
       audio.src = tracks[playNum];
       backgroundImage.src = background[playNum];
       coverImage.src = covers[playNum];
+      songTitle.innerText = titles[playNum];
+      songArtist.innerText = artists[playNum];
       audio.play();
     }
   });
@@ -104,8 +120,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const duration = audio.duration;
 
     timeline.value = (currentTime / duration) * 100;
+    let percentage = timeline.value;
     currentTimeText.textContent = formatTime(currentTime);
     durationText.textContent = formatTime(duration);
+    timeline.style.background = `linear-gradient(to right, black ${percentage}%, gray ${percentage}%)`;
   });
 
   timeline.addEventListener("input", function () {
@@ -118,3 +136,4 @@ document.addEventListener("DOMContentLoaded", function () {
     return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
   }
 });
+ .
