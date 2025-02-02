@@ -1,1 +1,0 @@
-console.log("The work completed 80/100")
