@@ -165,7 +165,6 @@ a {
     font-weight: 400;
     line-height: 24px;
     text-align: left;
-    display: flex;
     height: 27px;
 
 }
@@ -739,10 +738,29 @@ a {
     cursor: pointer;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 9;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 @media (max-width: 1280px) {
     .pets-content-slider {
         column-gap: 12px;
     }
+
     .cards-container {
         column-gap: 35px;
     }
@@ -763,6 +781,69 @@ a {
 }
 
 @media (max-width: 768px) {
+    .nav {
+        display: flex;
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 320px;
+        background-color: #292929;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        z-index: 10;
+        transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out, visibility 0.5s ease-in-out;
+        ;
+        justify-content: center;
+        visibility: hidden;
+    }
+
+    .nav-active {
+        transform: translateX(0);
+        align-items: center;
+        justify-content: center;
+        visibility: visible;
+    }
+
+    .nav-hidden {
+        display: none;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 40px 0;
+        width: 243px;
+        height: 327px;
+    }
+
+    .nav-item {
+        margin: 0 auto;
+    }
+
+    .nav-item:last-child {
+        margin: 0 auto
+    }
+
+    .nav-item a {
+        font-family: Arial;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 51.2px;
+        text-align: left;
+    }
+
+    .burger-icon {
+        display: block;
+        cursor: pointer;
+        z-index: 100;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .burger-icon-active {
+        transform: rotate(90deg)
+    }
+
     .start-screen {
         padding-left: 30px;
         padding-right: 30px;
@@ -770,9 +851,8 @@ a {
     }
 
     .header {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        justify-content: space-between;
+
     }
 
     .not-only {
@@ -929,6 +1009,7 @@ a {
         margin-right: auto;
     }
 }
+
 
 
 @media (max-width: 320px) {
