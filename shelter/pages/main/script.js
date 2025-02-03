@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const overlay = document.getElementById("overlay");
 
   function toggleMenu() {
+
     nav.classList.toggle("nav-active");
     nav.classList.remove("nav-hidden");
     burgerIcon.classList.toggle("burger-icon-active");
@@ -20,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function closeMenu() {
+
     nav.classList.remove("nav-active");
     burgerIcon.classList.remove("burger-icon-active");
     overlay.classList.remove("active");
@@ -27,13 +29,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   burgerIcon.addEventListener("click", toggleMenu);
-
   overlay.addEventListener("click", toggleMenu);
-
+  
   window.addEventListener("resize", function () {
     if (window.innerWidth > 768) {
       nav.classList.add("nav-hidden");
-      closeMenu()
+      closeMenu();
     } else {
       nav.classList.remove("nav-hidden");
     }
