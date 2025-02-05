@@ -75,34 +75,107 @@
             <div class="pets-content">
                 <h3 class="pets-content-heading">Our friends who <br> are looking for a house</h3>
                 <div class="pets-content-slider">
-                    <button class="button-arrow left"><img src="../../assets/icons/Arrow.svg" alt="arrow"></button>
-                    <div class="cards-container">
-                        <div class="pets-content-slider-card">
-                            <img src="../../assets/images/pets-katrine.png" alt="Katrine cat"
-                                class="pets-content-slider-card-img">
-                            <p class="pets-content-slider-card-name">Katrine</p>
-                            <button class="pets-content-slider-card-button">Learn more</button>
-                        </div>
-                        <div class="pets-content-slider-card">
-                            <img src="../../assets/images/pets-jennifer.png" alt="Jennifer dog"
-                                class="pets-content-slider-card-img">
-                            <p class="pets-content-slider-card-name">Jennifer</p>
-                            <button class="pets-content-slider-card-button">Learn more</button>
-                        </div>
-                        <div class="pets-content-slider-card">
-                            <img src="../../assets/images/pets-woody.png" alt="Woody dog"
-                                class="pets-content-slider-card-img">
-                            <p class="pets-content-slider-card-name">Woody</p>
-                            <button class="pets-content-slider-card-button">Learn more</button>
+                    <button class="button-arrow left" id="button-arrow-left"><img src="../../assets/icons/Arrow.svg"
+                            alt="arrow"></button>
+                    <div class="carousel-wrapper">
+                        <div class="carousel" id="carousel">
+                            <div class="cards-container" id="left-cards">
+
+                                <div class="pets-content-slider-card">
+                                    <img src="../../assets/images/pets-katrine.png" alt="Katrine cat"
+                                        class="pets-content-slider-card-img">
+                                    <p class="pets-content-slider-card-name">Katrine</p>
+                                    <button class="pets-content-slider-card-button">Learn more</button>
+                                </div>
+                                <div class="pets-content-slider-card">
+                                    <img src="../../assets/images/pets-jennifer.png" alt="Jennifer dog"
+                                        class="pets-content-slider-card-img">
+                                    <p class="pets-content-slider-card-name">Jennifer</p>
+                                    <button class="pets-content-slider-card-button">Learn more</button>
+                                </div>
+                                <div class="pets-content-slider-card">
+                                    <img src="../../assets/images/pets-woody.png" alt="Woody dog"
+                                        class="pets-content-slider-card-img">
+                                    <p class="pets-content-slider-card-name">Woody</p>
+                                    <button class="pets-content-slider-card-button">Learn more</button>
+                                </div>
+                            </div>
+                            <div class="cards-container" id="active-cards">
+
+                                <div class="pets-content-slider-card">
+                                    <img src="../../assets/images/pets-katrine.png" alt="Katrine cat"
+                                        class="pets-content-slider-card-img">
+                                    <p class="pets-content-slider-card-name">Katrine</p>
+                                    <button class="pets-content-slider-card-button">Learn more</button>
+                                </div>
+                                <div class="pets-content-slider-card">
+                                    <img src="../../assets/images/pets-jennifer.png" alt="Jennifer dog"
+                                        class="pets-content-slider-card-img">
+                                    <p class="pets-content-slider-card-name">Jennifer</p>
+                                    <button class="pets-content-slider-card-button">Learn more</button>
+                                </div>
+                                <div class="pets-content-slider-card">
+                                    <img src="../../assets/images/pets-woody.png" alt="Woody dog"
+                                        class="pets-content-slider-card-img">
+                                    <p class="pets-content-slider-card-name">Woody</p>
+                                    <button class="pets-content-slider-card-button">Learn more</button>
+                                </div>
+                            </div>
+                            <div class="cards-container" id="right-cards">
+
+                                <div class="pets-content-slider-card">
+                                    <img src="../../assets/images/pets-katrine.png" alt="Katrine cat"
+                                        class="pets-content-slider-card-img">
+                                    <p class="pets-content-slider-card-name">Katrine</p>
+                                    <button class="pets-content-slider-card-button">Learn more</button>
+                                </div>
+                                <div class="pets-content-slider-card">
+                                    <img src="../../assets/images/pets-jennifer.png" alt="Jennifer dog"
+                                        class="pets-content-slider-card-img">
+                                    <p class="pets-content-slider-card-name">Jennifer</p>
+                                    <button class="pets-content-slider-card-button">Learn more</button>
+                                </div>
+                                <div class="pets-content-slider-card">
+                                    <img src="../../assets/images/pets-woody.png" alt="Woody dog"
+                                        class="pets-content-slider-card-img">
+                                    <p class="pets-content-slider-card-name">Woody</p>
+                                    <button class="pets-content-slider-card-button">Learn more</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <button class="button-arrow right"><img src="../../assets/icons/Arrow-2.svg" alt="arrow"></button>
+
+                    <button class="button-arrow right" id="button-arrow-right"><img src="../../assets/icons/Arrow-2.svg"
+                            alt="arrow"></button>
                 </div>
                 <form action="../pets/index.html" style="color: #292929;"><button class="pets-content-button">Get to
                         know the rest</button></form>
             </div>
         </div>
     </section>
+
+    <div class="popup">
+        <div class="popup-container">
+            <button class="popup-close-btn"><img src="../../assets/icons/Vector.svg" alt="Cross"></button>
+            <div class="popup-window">
+                <img src="../../assets/images/pets-jennifer.png" alt="Jennifer" class="popup-img">
+                <div class="popup-window-text-container">
+                    <h3 class="h3-popup">Jennifer</h3>
+                    <h4 class="h4-popup">Dog - Labrador</h4>
+                    <p class="popup-text">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home.
+                         This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house
+                          if she has all of her favorite toys.</p>
+                    <ul class="popup-list">
+                        <li class="popup-list-item"><p class="popup-list-item-text"><span class="popup-span">Age:</span> 2 months</p></li>
+                        <li class="popup-list-item"><p class="popup-list-item-text"><span class="popup-span">Inoculations:</span> none</p></li>
+                        <li class="popup-list-item"><p class="popup-list-item-text"><span class="popup-span">Diseases:</span> none</p></li>
+                        <li class="popup-list-item"><p class="popup-list-item-text"><span class="popup-span">Parasites:</span> none</p></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section class="help" id="help">
         <div class="container">

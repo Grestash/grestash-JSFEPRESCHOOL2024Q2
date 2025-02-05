@@ -78,7 +78,8 @@ summary,
 time,
 mark,
 audio,
-video {
+video,
+button {
     margin: 0;
     padding: 0;
     border: 0;
@@ -330,11 +331,14 @@ a {
 }
 
 .pets-content-slider {
+    max-width: 1200px;
     margin-top: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     column-gap: 53px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .button-arrow {
@@ -351,6 +355,52 @@ a {
     cursor: pointer;
     outline: none;
     border: 0;
+}
+
+.carousel-wrapper {
+    width: 990px;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    left: -1080px;
+    display: flex;
+    gap: 0 90px;
+}
+
+@keyframes move-right {
+    from {
+        left: -1080px;
+    }
+
+    to {
+        left: -2160px;
+    }
+}
+
+.transition-right {
+    animation-name: move-right;
+    animation-duration: 1.5s;
+}
+
+@keyframes move-left {
+    from {
+        left: -1080px;
+    }
+
+    to {
+        left: 0px;
+    }
+}
+
+.hidden {
+    display: none;
+  }
+
+.transition-left {
+    animation-name: move-left;
+    animation-duration: 1.5s;
 }
 
 .cards-container {
@@ -914,7 +964,8 @@ a {
         max-height: 435px;
         flex-wrap: wrap;
         overflow: hidden;
-        max-width: 580px;
+        width: 580px;
+        flex-direction: column;
     }
 
     .pets-content-slider {
@@ -1332,4 +1383,86 @@ a {
     .footer-content {
         row-gap: 40px;
     }
+}
+
+.popup-container {
+    max-width: 900px;
+    visibility: visible;
+    display: flex;
+    position: relative;
+    background-color: rgb(250, 250, 250);
+    border-radius: 9px;
+    margin: auto;
+}
+.popup-close-btn {
+    position: absolute;
+    top: -52px;
+    right: -42px;
+    width: 52px;
+    height: 52px;
+    border-radius: 100px;
+    border: 2px solid #F1CDB3;
+    background: transparent;
+}
+.popup-close-btn:hover {
+    background-color: #FDDCC4;
+}
+.popup-window {
+    display: flex;
+    justify-content: space-between;
+}
+.popup-img {
+    width: 500px;
+    height: 500px;
+}
+.popup-window-text-container{
+    padding: 50px 20px 0 29px;
+}
+
+.h3-popup {
+    font-family: Georgia;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 45.5px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.h4-popup {
+    font-family: Georgia;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    margin-bottom: 40px;
+}
+.popup-text {
+    font-family: Georgia;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 16.5px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    margin-bottom: 40px;
+}
+.popup-list {
+    padding-left: 15px;
+}
+.popup-list-item {
+    margin-bottom: 10px;
+}
+.popup-list-item::marker {
+    color: #F1CDB3;
+}
+.popup-list-item-text {
+    font-family: Georgia;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 16.5px;
+    letter-spacing: 0.06em;
+    text-align: left;
+}
+.popup-span {
+    font-weight: bold;
 }
