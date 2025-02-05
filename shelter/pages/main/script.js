@@ -63,9 +63,10 @@ document.addEventListener("DOMContentLoaded", function () {
     return [...numbers];
   };
 
-  const createCardTemplate = () => {
+  const createCardTemplate = (i) => {
     const card = document.createElement("div");
     card.classList.add("pets-content-slider-card");
+    card.id = i;
     return card;
   };
 
@@ -74,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let numbersArr = randomNumbers(0, petsData.length - 1);
 
     numbersArr.forEach(function (i) {
-      const card = createCardTemplate();
+      const card = createCardTemplate(i);
 
       card.innerHTML = `
           <img src="${petsData[i].img}" alt="${petsData[i].name}" class="pets-content-slider-card-img">
@@ -124,4 +125,52 @@ document.addEventListener("DOMContentLoaded", function () {
     BTN_LEFT.addEventListener("click", moveLeft);
     BTN_RIGHT.addEventListener("click", moveRight);
   });
+
+  //===============================================================
+
+  const sliderCards = document.querySelectorAll(".pets-content-slider-card");
+  const popup = document.querySelector(".popup");
+  const popup_overlay = document.getElementById("popup-overlay");
+  const sliderContainer = document.querySelector(".pets-content-slider");
+
+  // function TogglePopup (event) {
+  // 
+  //
+
+  //   if (card && !isPopup) {
+      
+  // }}
+
+  sliderContainer.addEventListener("click", (event) => {
+    let card = event.target.closest(".pets-content-slider-card");
+    if (!card) return;
+    let id = card.id;
+    let popupPet = petsData.find((cart) => cart.id == id);
+    console.log(popupPet)
+    openPopup(popupPet);
+  });
+
+  function createPopup(arr) {
+
+  }
+
+  function openPopup(pet) {
+    createPopup(pet)
+    popup.classList.add('popup-open');
+    popup_overlay.classList.add('active');
+    document.body.classList.add('no-scroll');
+  }
+
+  function closePopup() {
+    popup.classList.remove("popup-open");
+    popup_overlay.classList.remove("active");
+    document.body.classList.remove("no-scroll");
+  }
+
+  document.addEventListener('click', (event) => {
+    if (event.target == popup) {
+      closePopup();
+    }
+  });
+
 });
