@@ -132,33 +132,38 @@ document.addEventListener("DOMContentLoaded", function () {
   const popup = document.querySelector(".popup");
   const popup_overlay = document.getElementById("popup-overlay");
   const sliderContainer = document.querySelector(".pets-content-slider");
-
-  // function TogglePopup (event) {
-  // 
-  //
-
-  //   if (card && !isPopup) {
-      
-  // }}
+  const popup_window = document.querySelector(".popup-window");
+  const popup_close_btn = document.querySelector(".popup-close-btn");
 
   sliderContainer.addEventListener("click", (event) => {
     let card = event.target.closest(".pets-content-slider-card");
     if (!card) return;
     let id = card.id;
     let popupPet = petsData.find((cart) => cart.id == id);
-    console.log(popupPet)
+    console.log(popupPet);
     openPopup(popupPet);
   });
 
   function createPopup(arr) {
-
+    popup_window.innerHTML = `<img src="${arr.img}" alt="${arr.name}" class="popup-img">
+                <div class="popup-window-text-container">
+                    <h3 class="h3-popup">${arr.name}</h3>
+                    <h4 class="h4-popup">${arr.type} - ${arr.breed}</h4>
+                    <p class="popup-text">${arr.description}</p>
+                    <ul class="popup-list">
+                        <li class="popup-list-item"><p class="popup-list-item-text"><span class="popup-span">Age:</span> ${arr.age}</p></li>
+                        <li class="popup-list-item"><p class="popup-list-item-text"><span class="popup-span">Inoculations:</span> ${arr.inoculations}</p></li>
+                        <li class="popup-list-item"><p class="popup-list-item-text"><span class="popup-span">Diseases:</span> ${arr.diseases}</p></li>
+                        <li class="popup-list-item"><p class="popup-list-item-text"><span class="popup-span">Parasites:</span> ${arr.parasites}</p></li>
+                    </ul>
+                </div>`;
   }
 
   function openPopup(pet) {
-    createPopup(pet)
-    popup.classList.add('popup-open');
-    popup_overlay.classList.add('active');
-    document.body.classList.add('no-scroll');
+    createPopup(pet);
+    popup.classList.add("popup-open");
+    popup_overlay.classList.add("active");
+    document.body.classList.add("no-scroll");
   }
 
   function closePopup() {
@@ -167,10 +172,11 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.remove("no-scroll");
   }
 
-  document.addEventListener('click', (event) => {
+  popup_close_btn.addEventListener("click", () => closePopup());
+
+  document.addEventListener("click", (event) => {
     if (event.target == popup) {
       closePopup();
     }
   });
-
 });
