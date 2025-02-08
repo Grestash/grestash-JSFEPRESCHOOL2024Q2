@@ -303,6 +303,7 @@ a {
     border-radius: 100px;
     border: 2px solid #F1CDB3;
     opacity: 0px;
+    
 }
 
 .button-paginator:hover {
@@ -337,15 +338,8 @@ a {
     border: 2px solid #CDCDCD;
 }
 
-.button-paginator-inactive-text {
+.button-paginator-text-inactive {
     color: #CDCDCD;
-    font-family: Georgia;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 23px;
-    letter-spacing: 0.06em;
-    text-align: center;
-    margin: 0 auto;
 }
 
 .footer {
