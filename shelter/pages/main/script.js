@@ -55,8 +55,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   const randomNumbers = (min, max) => {
+    let limit;
+    if (window.innerWidth <= 767) {
+      limit = 1;
+    } else if (window.innerWidth <= 1080) {
+      limit = 2;
+    } else {
+      limit = 3;
+    }
+
     let numbers = new Set();
-    while (numbers.size < 3) {
+    while (numbers.size < limit) {
       let num = Math.floor(Math.random() * (max - min + 1)) + min;
       numbers.add(num);
     }
@@ -125,6 +134,17 @@ document.addEventListener("DOMContentLoaded", function () {
     BTN_LEFT.addEventListener("click", moveLeft);
     BTN_RIGHT.addEventListener("click", moveRight);
   });
+
+  function debounce(func, delay) {
+    let timeout;
+    return function (...args) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        func.apply(this, args);
+      }, delay);
+    };
+  }
+  window.onresize = debounce(initCarousel, 700);
 
   //===============================================================
 
