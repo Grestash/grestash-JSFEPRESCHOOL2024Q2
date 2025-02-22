@@ -24,7 +24,7 @@
                         </p>
                     </div>
                 </a>
-                <img src="../../assets/images/Burger.png" alt="burger image" class="burger-icon">
+                <img src="../../assets/images/Burger.png" alt="burger image" class="burger-icon" id="burger-icon">
                 <nav class="nav">
                     <ul class="nav-list">
                         <li class="nav-item"> <a href="#" class="nav-item active" style="color: #FAFAFA;">About the
@@ -34,6 +34,7 @@
                         <li class="nav-item"> <a href="#footer">Contacts</a></li>
                     </ul>
                 </nav>
+                <div class="overlay" id="overlay"></div>
             </header>
             <section class="not-only">
                 <div class="not-only-text">
@@ -49,128 +50,222 @@
         </div>
     </div>
 
-    <section class="about">
-        <div class="container">
-            <div class="about-content">
-                <img src="../../assets/images/about-pets.png" alt="pets image" class="about-content-img">
-                <div class="about-content-text">
-                    <h3 class="about-content-text-heading">About the shelter <br> “Cozy House”</h3>
-                    <p class="about-content-text-subheading-1">Currently we have 121 dogs and 342 cats on our hands and
-                        statistics show that only 20% of them will find a family. The others will continue to live with
-                        us and will be waiting for a lucky chance to become dearly loved.</p>
-                    <p class="about-content-text-subheading-2">We feed our wards with the best food and make sure that
-                        they do not get sick, feel comfortable (including psychologically) and well. We are supported by
-                        87 volunteers and 28 employees of various skill levels. About 12% of the animals are taken by
-                        the
-                        shelter staff. Taking care of the animals, they become attached to the pets and would hardly
-                        ever leave them alone.</p>
+    <main>
+        <section class="about">
+            <div class="container">
+                <div class="about-content">
+                    <img src="../../assets/images/about-pets.png" alt="pets image" class="about-content-img">
+                    <div class="about-content-text">
+                        <h3 class="about-content-text-heading">About the shelter <br> “Cozy House”</h3>
+                        <p class="about-content-text-subheading-1">Currently we have 121 dogs and 342 cats on our hands
+                            and
+                            statistics show that only 20% of them will find a family. The others will continue to live
+                            with
+                            us and will be waiting for a lucky chance to become dearly loved.</p>
+                        <p class="about-content-text-subheading-2">We feed our wards with the best food and make sure
+                            that
+                            they do not get sick, feel comfortable (including psychologically) and well. We are
+                            supported by
+                            87 volunteers and 28 employees of various skill levels. About 12% of the animals are taken
+                            by
+                            the
+                            shelter staff. Taking care of the animals, they become attached to the pets and would hardly
+                            ever leave them alone.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="pets" id="pets">
-        <div class="container">
-            <div class="pets-content">
-                <h3 class="pets-content-heading">Our friends who <br> are looking for a house</h3>
-                <div class="pets-content-slider">
-                    <button class="button-arrow left"><img src="../../assets/icons/Arrow.svg" alt="arrow"></button>
-                    <div class="cards-container">
-                        <div class="pets-content-slider-card">
-                            <img src="../../assets/images/pets-katrine.png" alt="Katrine cat"
-                                class="pets-content-slider-card-img">
-                            <p class="pets-content-slider-card-name">Katrine</p>
-                            <button class="pets-content-slider-card-button">Learn more</button>
-                        </div>
-                        <div class="pets-content-slider-card">
-                            <img src="../../assets/images/pets-jennifer.png" alt="Jennifer dog"
-                                class="pets-content-slider-card-img">
-                            <p class="pets-content-slider-card-name">Jennifer</p>
-                            <button class="pets-content-slider-card-button">Learn more</button>
-                        </div>
-                        <div class="pets-content-slider-card">
-                            <img src="../../assets/images/pets-woody.png" alt="Woody dog"
-                                class="pets-content-slider-card-img">
-                            <p class="pets-content-slider-card-name">Woody</p>
-                            <button class="pets-content-slider-card-button">Learn more</button>
-                        </div>
-                    </div>
-                    <button class="button-arrow right"><img src="../../assets/icons/Arrow-2.svg" alt="arrow"></button>
-                </div>
-                <form action="../pets/index.html" style="color: #292929;"><button class="pets-content-button">Get to
-                        know the rest</button></form>
-            </div>
-        </div>
-    </section>
+        <section class="pets" id="pets">
+            <div class="container">
+                <div class="pets-content">
+                    <h3 class="pets-content-heading">Our friends who <br> are looking for a house</h3>
+                    <div class="pets-content-slider">
+                        <button class="button-arrow left" id="button-arrow-left"><img src="../../assets/icons/Arrow.svg"
+                                alt="arrow"></button>
+                        <div class="carousel-wrapper">
+                            <div class="carousel" id="carousel">
+                                <div class="cards-container" id="left-cards">
 
-    <section class="help" id="help">
-        <div class="container">
-            <div class="help-content">
-                <h3 class="help-content-heading">How you can help our shelter</h3>
-                <div class="help-content-list">
-                    <div class="help-content-list-item">
-                        <img src="../../assets/icons/icon-pet-food.svg" alt="icon"
-                            class="list-item-icon">
-                        <h4 class="list-item-title">Pet food</h4>
-                    </div>
-                    <div class="help-content-list-item">
-                        <img src="../../assets/icons/icon-transportation.svg" alt="icon" class="list-item-icon">
-                        <h4 class="list-item-title">Transportation</h4>
-                    </div>
-                    <div class="help-content-list-item">
-                        <img src="../../assets/icons/icon-toys.svg" alt="icon" class="list-item-icon">
-                        <h4 class="list-item-title">Toys</h4>
-                    </div>
-                    <div class="help-content-list-item">
-                        <img src="../../assets/icons/icon-bowls-and-cups.svg" alt="icon" class="list-item-icon">
-                        <h4 class="list-item-title">Bowls and cups</h4>
-                    </div>
-                    <div class="help-content-list-item">
-                        <img src="../../assets/icons/icon-shampoos.svg" alt="icon" class="list-item-icon">
-                        <h4 class="list-item-title">Shampoos</h4>
-                    </div>
-                    <div class="help-content-list-item">
-                        <img src="../../assets/icons/icon-vitamins.svg" alt="icon" class="list-item-icon">
-                        <h4 class="list-item-title">Vitamins</h4>
-                    </div>
-                    <div class="help-content-list-item">
-                        <img src="../../assets/icons/icon-medicines.svg" alt="icon" class="list-item-icon">
-                        <h4 class="list-item-title">Medicines</h4>
-                    </div>
-                    <div class="help-content-list-item">
-                        <img src="../../assets/icons/icon-collars-leashes.svg" alt="icon" class="list-item-icon">
-                        <h4 class="list-item-title">Collars / leashes</h4>
-                    </div>
-                    <div class="help-content-list-item">
-                        <img src="../../assets/icons/icon-sleeping-area.svg" alt="icon" class="list-item-icon">
-                        <h4 class="list-item-title">Sleeping areas</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                                    <div class="pets-content-slider-card">
+                                        <img src="../../assets/images/pets-katrine.png" alt="Katrine cat"
+                                            class="pets-content-slider-card-img">
+                                        <p class="pets-content-slider-card-name">Katrine</p>
+                                        <button class="pets-content-slider-card-button">Learn more</button>
+                                    </div>
+                                    <div class="pets-content-slider-card">
+                                        <img src="../../assets/images/pets-jennifer.png" alt="Jennifer dog"
+                                            class="pets-content-slider-card-img">
+                                        <p class="pets-content-slider-card-name">Jennifer</p>
+                                        <button class="pets-content-slider-card-button">Learn more</button>
+                                    </div>
+                                    <div class="pets-content-slider-card">
+                                        <img src="../../assets/images/pets-woody.png" alt="Woody dog"
+                                            class="pets-content-slider-card-img">
+                                        <p class="pets-content-slider-card-name">Woody</p>
+                                        <button class="pets-content-slider-card-button">Learn more</button>
+                                    </div>
+                                </div>
+                                <div class="cards-container" id="active-cards">
 
-    <section class="donation">
-        <div class="container">
-            <div class="donation-content">
-                <img src="../../assets/images/donation-dog.png" alt="dog" class="donation-content-img">
-                <div class="donation-content-text">
-                    <h3 class="donation-heading">You can also make a donation</h3>
-                    <h5 class="donation-subheading">Name of the bank / Type of bank account</h5>
-                    <div class="credit-card">
-                        <img src="../../assets/icons/credit-card.svg" alt="credit-card"
-                            class="credit-card-content-icon">
-                        <h4 class="credit-card-content-numbers"><a href="#no-scroll"
-                                class="credit-card-content-numbers-link">8380 2880 8028 8791 7435</a></h4>
+                                    <div class="pets-content-slider-card">
+                                        <img src="../../assets/images/pets-katrine.png" alt="Katrine cat"
+                                            class="pets-content-slider-card-img">
+                                        <p class="pets-content-slider-card-name">Katrine</p>
+                                        <button class="pets-content-slider-card-button">Learn more</button>
+                                    </div>
+                                    <div class="pets-content-slider-card">
+                                        <img src="../../assets/images/pets-jennifer.png" alt="Jennifer dog"
+                                            class="pets-content-slider-card-img">
+                                        <p class="pets-content-slider-card-name">Jennifer</p>
+                                        <button class="pets-content-slider-card-button">Learn more</button>
+                                    </div>
+                                    <div class="pets-content-slider-card">
+                                        <img src="../../assets/images/pets-woody.png" alt="Woody dog"
+                                            class="pets-content-slider-card-img">
+                                        <p class="pets-content-slider-card-name">Woody</p>
+                                        <button class="pets-content-slider-card-button">Learn more</button>
+                                    </div>
+                                </div>
+                                <div class="cards-container" id="right-cards">
+
+                                    <div class="pets-content-slider-card">
+                                        <img src="../../assets/images/pets-katrine.png" alt="Katrine cat"
+                                            class="pets-content-slider-card-img">
+                                        <p class="pets-content-slider-card-name">Katrine</p>
+                                        <button class="pets-content-slider-card-button">Learn more</button>
+                                    </div>
+                                    <div class="pets-content-slider-card">
+                                        <img src="../../assets/images/pets-jennifer.png" alt="Jennifer dog"
+                                            class="pets-content-slider-card-img">
+                                        <p class="pets-content-slider-card-name">Jennifer</p>
+                                        <button class="pets-content-slider-card-button">Learn more</button>
+                                    </div>
+                                    <div class="pets-content-slider-card">
+                                        <img src="../../assets/images/pets-woody.png" alt="Woody dog"
+                                            class="pets-content-slider-card-img">
+                                        <p class="pets-content-slider-card-name">Woody</p>
+                                        <button class="pets-content-slider-card-button">Learn more</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="button-arrow right" id="button-arrow-right"><img
+                                src="../../assets/icons/Arrow-2.svg" alt="arrow"></button>
                     </div>
-                    <p class="donation-text">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit.
-                        Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et
-                        vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                    <form action="../pets/index.html" style="color: #292929;"><button class="pets-content-button">Get to
+                            know the rest</button></form>
+                </div>
+            </div>
+        </section>
+
+        <div class="popup-overlay" id="popup-overlay"></div>
+        <div class="popup">
+            <div class="popup-container">
+                <button class="popup-close-btn"><img src="../../assets/icons/Vector.svg" alt="Cross" style="margin-top: 6px;"></button>
+                <div class="popup-window">
+                    <img src="../../assets/images/pets-jennifer.png" alt="Jennifer" class="popup-img">
+                    <div class="popup-window-text-container">
+                        <h3 class="h3-popup">Jennifer</h3>
+                        <h4 class="h4-popup">Dog - Labrador</h4>
+                        <p class="popup-text">Jennifer is a sweet 2 months old Labrador that is patiently waiting to
+                            find a
+                            new forever home.
+                            This girl really enjoys being able to go outside to run and play, but won't hesitate to play
+                            up
+                            a storm in the house
+                            if she has all of her favorite toys.</p>
+                        <ul class="popup-list">
+                            <li class="popup-list-item">
+                                <p class="popup-list-item-text"><span class="popup-span">Age:</span> 2 months</p>
+                            </li>
+                            <li class="popup-list-item">
+                                <p class="popup-list-item-text"><span class="popup-span">Inoculations:</span> none</p>
+                            </li>
+                            <li class="popup-list-item">
+                                <p class="popup-list-item-text"><span class="popup-span">Diseases:</span> none</p>
+                            </li>
+                            <li class="popup-list-item">
+                                <p class="popup-list-item-text"><span class="popup-span">Parasites:</span> none</p>
+                            </li>
+                        </ul>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+
+        <section class="help" id="help">
+            <div class="container">
+                <div class="help-content">
+                    <h3 class="help-content-heading">How you can help our shelter</h3>
+                    <div class="help-content-list">
+                        <div class="help-content-list-item">
+                            <img src="../../assets/icons/icon-pet-food.svg" alt="icon" class="list-item-icon">
+                            <h4 class="list-item-title">Pet food</h4>
+                        </div>
+                        <div class="help-content-list-item">
+                            <img src="../../assets/icons/icon-transportation.svg" alt="icon" class="list-item-icon">
+                            <h4 class="list-item-title">Transportation</h4>
+                        </div>
+                        <div class="help-content-list-item">
+                            <img src="../../assets/icons/icon-toys.svg" alt="icon" class="list-item-icon">
+                            <h4 class="list-item-title">Toys</h4>
+                        </div>
+                        <div class="help-content-list-item">
+                            <img src="../../assets/icons/icon-bowls-and-cups.svg" alt="icon" class="list-item-icon">
+                            <h4 class="list-item-title">Bowls and cups</h4>
+                        </div>
+                        <div class="help-content-list-item">
+                            <img src="../../assets/icons/icon-shampoos.svg" alt="icon" class="list-item-icon">
+                            <h4 class="list-item-title">Shampoos</h4>
+                        </div>
+                        <div class="help-content-list-item">
+                            <img src="../../assets/icons/icon-vitamins.svg" alt="icon" class="list-item-icon">
+                            <h4 class="list-item-title">Vitamins</h4>
+                        </div>
+                        <div class="help-content-list-item">
+                            <img src="../../assets/icons/icon-medicines.svg" alt="icon" class="list-item-icon">
+                            <h4 class="list-item-title">Medicines</h4>
+                        </div>
+                        <div class="help-content-list-item">
+                            <img src="../../assets/icons/icon-collars-leashes.svg" alt="icon" class="list-item-icon">
+                            <h4 class="list-item-title">Collars / leashes</h4>
+                        </div>
+                        <div class="help-content-list-item">
+                            <img src="../../assets/icons/icon-sleeping-area.svg" alt="icon" class="list-item-icon">
+                            <h4 class="list-item-title">Sleeping areas</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="donation">
+            <div class="container">
+                <div class="donation-content">
+                    <img src="../../assets/images/donation-dog.png" alt="dog" class="donation-content-img">
+                    <div class="donation-content-text">
+                        <h3 class="donation-heading">You can also make a donation</h3>
+                        <h5 class="donation-subheading">Name of the bank / Type of bank account</h5>
+                        <div class="credit-card">
+                            <img src="../../assets/icons/credit-card.svg" alt="credit-card"
+                                class="credit-card-content-icon">
+                            <h4 class="credit-card-content-numbers"><a href="#no-scroll"
+                                    class="credit-card-content-numbers-link">8380 2880 8028 8791 7435</a></h4>
+                        </div>
+                        <p class="donation-text">Legal information and lorem ipsum dolor sit amet, consectetur
+                            adipiscing
+                            elit.
+                            Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor
+                            et
+                            vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer" id="footer">
         <div class="container">
