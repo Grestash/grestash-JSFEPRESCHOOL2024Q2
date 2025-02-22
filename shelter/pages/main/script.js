@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // ========================
+  //       NAV MENU
+  // ========================
   const burgerIcon = document.getElementById("burger-icon");
   const nav = document.querySelector(".nav");
   const navLinks = document.querySelectorAll(".nav-list a");
@@ -37,7 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // ==========================================================
+  // ===================
+  //      CAROUSEL
+  // ===================
 
   const BTN_RIGHT = document.getElementById("button-arrow-right");
   const BTN_LEFT = document.getElementById("button-arrow-left");
@@ -144,9 +149,18 @@ document.addEventListener("DOMContentLoaded", function () {
       }, delay);
     };
   }
-  window.onresize = debounce(initCarousel, 700);
+  const debouncedInitCarousel = debounce(initCarousel, 300);
+  window.addEventListener(
+    "resize",
+    function () {
+      debouncedInitCarousel();
+    },
+    true
+  );
 
-  //===============================================================
+  //===================
+  //       POPUP
+  // ==================
 
   const sliderCards = document.querySelectorAll(".pets-content-slider-card");
   const popup = document.querySelector(".popup");
@@ -184,12 +198,19 @@ document.addEventListener("DOMContentLoaded", function () {
     popup.classList.add("popup-open");
     popup_overlay.classList.add("active");
     document.body.classList.add("no-scroll");
+    document.addEventListener("keydown", handleEscKey);
   }
 
   function closePopup() {
     popup.classList.remove("popup-open");
     popup_overlay.classList.remove("active");
     document.body.classList.remove("no-scroll");
+  }
+
+  function handleEscKey(event) {
+    if (event.key === "Escape") {
+      closePopup();
+    }
   }
 
   popup_close_btn.addEventListener("click", () => closePopup());

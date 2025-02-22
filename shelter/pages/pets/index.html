@@ -9,51 +9,63 @@
     <link rel="icon" href="../../assets/icons/icons8-pets-16.png">
     <title>Our pets</title>
 </head>
-<body>
-        <div class="header-container">
-            <header class="header">
-                <a href="../pets/index.html" class="logo-link">
-                    <div class="logo">
-                        <h1 class="logo-title">
-                            Cozy House
-                        </h1>
-                        <p class="logo-subtitle">
-                            Shelter for pets in Boston
-                        </p>
-                    </div>
-                </a>
-                <img src="../../assets/images/Burger2.png" alt="burger image" class="burger-icon" id="burger-icon">
-                <nav class="nav">
-                    <ul class="nav-list">
-                        <li class="nav-item"> <a href="../main/index.html" >About the shelter</a></li>
-                        <li class="nav-item"> <a href="#" class="nav-item active" style="color: #292929;">Our pets</a></li>
-                        <li class="nav-item"> <a href="../main/index.html#help">Help the shelter</a></li>
-                        <li class="nav-item"> <a href="#footer">Contacts</a></li>
-                    </ul>
-                </nav>
-                <div class="overlay" id="overlay"></div>
-            </header>
-        </div>
 
+<body>
+    <div class="header-container">
+        <header class="header">
+            <a href="../pets/index.html" class="logo-link">
+                <div class="logo">
+                    <h1 class="logo-title">
+                        Cozy House
+                    </h1>
+                    <p class="logo-subtitle">
+                        Shelter for pets in Boston
+                    </p>
+                </div>
+            </a>
+            <img src="../../assets/images/Burger2.png" alt="burger image" class="burger-icon" id="burger-icon">
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"> <a href="../main/index.html">About the shelter</a></li>
+                    <li class="nav-item"> <a href="#" class="nav-item active" style="color: #292929;">Our pets</a></li>
+                    <li class="nav-item"> <a href="../main/index.html#help">Help the shelter</a></li>
+                    <li class="nav-item"> <a href="#footer">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="overlay" id="overlay"></div>
+        </header>
+    </div>
+
+    <main>
         <div class="popup-overlay" id="popup-overlay"></div>
         <div class="popup">
             <div class="popup-container">
-                <button class="popup-close-btn"><img src="../../assets/icons/Vector.svg" alt="Cross"></button>
+                <button class="popup-close-btn"><img src="../../assets/icons/Vector.svg" alt="Cross" style="margin-top: 6px;"></button>
                 <div class="popup-window">
                     <img src="../../assets/images/pets-jennifer.png" alt="Jennifer" class="popup-img">
                     <div class="popup-window-text-container">
                         <h3 class="h3-popup">Jennifer</h3>
                         <h4 class="h4-popup">Dog - Labrador</h4>
-                        <p class="popup-text">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home.
-                             This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house
-                              if she has all of her favorite toys.</p>
+                        <p class="popup-text">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a
+                            new forever home.
+                            This girl really enjoys being able to go outside to run and play, but won't hesitate to play up
+                            a storm in the house
+                            if she has all of her favorite toys.</p>
                         <ul class="popup-list">
-                            <li class="popup-list-item"><p class="popup-list-item-text"><span class="popup-span">Age:</span> 2 months</p></li>
-                            <li class="popup-list-item"><p class="popup-list-item-text"><span class="popup-span">Inoculations:</span> none</p></li>
-                            <li class="popup-list-item"><p class="popup-list-item-text"><span class="popup-span">Diseases:</span> none</p></li>
-                            <li class="popup-list-item"><p class="popup-list-item-text"><span class="popup-span">Parasites:</span> none</p></li>
+                            <li class="popup-list-item">
+                                <p class="popup-list-item-text"><span class="popup-span">Age:</span> 2 months</p>
+                            </li>
+                            <li class="popup-list-item">
+                                <p class="popup-list-item-text"><span class="popup-span">Inoculations:</span> none</p>
+                            </li>
+                            <li class="popup-list-item">
+                                <p class="popup-list-item-text"><span class="popup-span">Diseases:</span> none</p>
+                            </li>
+                            <li class="popup-list-item">
+                                <p class="popup-list-item-text"><span class="popup-span">Parasites:</span> none</p>
+                            </li>
                         </ul>
-    
+
                     </div>
                 </div>
             </div>
@@ -117,53 +129,62 @@
                     </div>
 
                     <div class="pets-content-nav">
-                        <button class="button-paginator-inactive" id="start-btn"><span class="button-paginator-text">&lt;&lt;</span></button>
-                        <button class="button-paginator-inactive" id="prev-btn"><span class="button-paginator-text">&lt;</span></button>
-                        <button class="button-paginator-active" id ="page-number"><span class="button-paginator-text">1</span></button>
-                        <button class="button-paginator" id="next-btn"><span class="button-paginator-text">&gt;</span></button>
-                        <button class="button-paginator" id="end-btn"><span class="button-paginator-text">&gt;&gt;</span></button>
+                        <button class="button-paginator-inactive" id="start-btn"><span
+                                class="button-paginator-text">&lt;&lt;</span></button>
+                        <button class="button-paginator-inactive" id="prev-btn"><span
+                                class="button-paginator-text">&lt;</span></button>
+                        <button class="button-paginator-active" id="page-number"><span
+                                class="button-paginator-text">1</span></button>
+                        <button class="button-paginator" id="next-btn"><span
+                                class="button-paginator-text">&gt;</span></button>
+                        <button class="button-paginator" id="end-btn"><span
+                                class="button-paginator-text">&gt;&gt;</span></button>
                     </div>
                 </div>
             </div>
         </section>
+    </main>
 
-        <footer class="footer" id="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-content-wrapper">
-                        <div class="footer-content-contacts">
-                            <h3 class="footer-contacts-title">For questions and suggestions</h3>
-                            <div class="footer-contacts-mail">
-                                <a href="https://mail.google.com"> <img src="../../assets/icons/icon-email.svg" alt="email"
-                                        class="footer-contacts-mail-icon"> </a>
-                                <a href="https://mail.google.com" class="footer-contacts-mail-text">email@shelter.com</a>
-                            </div>
-                            <div class="footer-contacts-phone">
-                                <a href="tel:+136745677554"><img src="../../assets/icons/icon-phone.svg" alt="phone"
-                                        class="footer-contacts-phone-icon"></a>
-                                <a href="tel:+136745677554" class="footer-contacts-phone-text">+13 674 567 75 54</a>
-                            </div>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-content-wrapper">
+                    <div class="footer-content-contacts">
+                        <h3 class="footer-contacts-title">For questions and suggestions</h3>
+                        <div class="footer-contacts-mail">
+                            <a href="https://mail.google.com"> <img src="../../assets/icons/icon-email.svg" alt="email"
+                                    class="footer-contacts-mail-icon"> </a>
+                            <a href="https://mail.google.com" class="footer-contacts-mail-text">email@shelter.com</a>
                         </div>
-                        <div class="footer-content-location">
-                            <h3 class="footer-location-title">We are waiting for your visit</h3>
-                            <div class="footer-location-boston">
-                                <a href="https://maps.app.goo.gl/6P5v5RmYzM1jEfSJ7"><img
-                                        src="../../assets/icons/icon-marker.svg" alt="marker" class="footer-location-icon"></a>
-                                <a href="https://maps.app.goo.gl/6P5v5RmYzM1jEfSJ7" class="footer-location-boston-text">1
-                                    Central Street, Boston (entrance from the store)</a>
-                            </div>
-                            <div class="footer-location-london">
-                                <a href="https://maps.app.goo.gl/JQy43YXoFPy89dWg6"><img
-                                        src="../../assets/icons/icon-marker.svg" alt="marker" class="footer-location-icon"></a>
-                                <a href="https://maps.app.goo.gl/JQy43YXoFPy89dWg6" class="footer-location-london-text">18 South
-                                    Park, London </a>
-                            </div>
+                        <div class="footer-contacts-phone">
+                            <a href="tel:+136745677554"><img src="../../assets/icons/icon-phone.svg" alt="phone"
+                                    class="footer-contacts-phone-icon"></a>
+                            <a href="tel:+136745677554" class="footer-contacts-phone-text">+13 674 567 75 54</a>
                         </div>
                     </div>
-                    <img src="../../assets/images/footer-puppy.png" alt="puppy" class="footer-content-img">
+                    <div class="footer-content-location">
+                        <h3 class="footer-location-title">We are waiting for your visit</h3>
+                        <div class="footer-location-boston">
+                            <a href="https://maps.app.goo.gl/6P5v5RmYzM1jEfSJ7"><img
+                                    src="../../assets/icons/icon-marker.svg" alt="marker"
+                                    class="footer-location-icon"></a>
+                            <a href="https://maps.app.goo.gl/6P5v5RmYzM1jEfSJ7" class="footer-location-boston-text">1
+                                Central Street, Boston (entrance from the store)</a>
+                        </div>
+                        <div class="footer-location-london">
+                            <a href="https://maps.app.goo.gl/JQy43YXoFPy89dWg6"><img
+                                    src="../../assets/icons/icon-marker.svg" alt="marker"
+                                    class="footer-location-icon"></a>
+                            <a href="https://maps.app.goo.gl/JQy43YXoFPy89dWg6" class="footer-location-london-text">18
+                                South
+                                Park, London </a>
+                        </div>
+                    </div>
                 </div>
+                <img src="../../assets/images/footer-puppy.png" alt="puppy" class="footer-content-img">
             </div>
-        </footer>
+        </div>
+    </footer>
 </body>
 
 </html>

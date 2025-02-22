@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // =================
+  //     NAV MENU
+  // =================
   const burgerIcon = document.getElementById("burger-icon");
   const nav = document.querySelector(".nav");
   const navLinks = document.querySelectorAll(".nav-list a");
@@ -37,22 +40,16 @@ document.addEventListener("DOMContentLoaded", function () {
       nav.classList.remove("nav-hidden");
     }
   });
-  //==========================================================
+  //===================
+  //       POPUP
+  // ==================
 
   fetch("../../materials/pets.json")
     .then((response) => response.json())
     .then((jsonData) => {
       petsData = jsonData;
       console.log(petsData);
-
-      mixedCards = mixCards(petsData, 6);
-      mixedCards = [].concat(...mixedCards);
-      console.log(mixedCards);
-
-      num_of_pages = Math.ceil(mixedCards.length / cardsPerPage);
-      console.log(num_of_pages);
-
-      showPage(1);
+      initializePagination(); // for further pagination
     });
 
   const sliderCards = document.querySelectorAll(".pets-content-slider-card");
@@ -90,12 +87,19 @@ document.addEventListener("DOMContentLoaded", function () {
     popup.classList.add("popup-open");
     popup_overlay.classList.add("active");
     document.body.classList.add("no-scroll");
+    document.addEventListener("keydown", handleEscKey);
   }
 
   function closePopup() {
     popup.classList.remove("popup-open");
     popup_overlay.classList.remove("active");
     document.body.classList.remove("no-scroll");
+  }
+
+  function handleEscKey(event) {
+    if (event.key === "Escape") {
+      closePopup();
+    }
   }
 
   popup_close_btn.addEventListener("click", () => closePopup());
@@ -105,11 +109,14 @@ document.addEventListener("DOMContentLoaded", function () {
       closePopup();
     }
   });
-  // ================================================
+  // =====================
+  //       PAGINATION
+  // =====================
   let petsData = [];
   let mixedCards = [];
   let num_of_pages;
-  let cardsPerPage = 8;
+  let cardsPerPage;
+
   let currentPage = 1;
   const cardsContainer = document.querySelector(".cards-container");
   const START_BTN = document.getElementById("start-btn");
@@ -225,7 +232,9 @@ document.addEventListener("DOMContentLoaded", function () {
   function mixCards(arr, copies = 6) {
     let result = [];
     for (let i = 0; i < copies; i++) {
-      const copy = [...arr];
+      arr.sort(() => Math.random() - 0.5);
+
+      const copy = arr.slice(0, cardsPerPage);
 
       copy.sort(() => Math.random() - 0.5);
       result.push(copy);
@@ -241,23 +250,54 @@ document.addEventListener("DOMContentLoaded", function () {
     return createCards(cardsSet);
   }
 
-  window.addEventListener('resize', function(){
-    cardsPerPage = widthSee();
-    num_of_pages = Math.ceil(mixedCards.length / itemsPerPage);
-});
-
-  function widthSee() {
-    let width = window.innerWidth;
-    let items = 0;
-
-    if (width <= 639) {
-        items = 3;
-    } else if (width <= 768) {
-        items = 6;
+  function initializeCardsCopies() {
+    if (window.innerWidth <= 658) {
+      return 16;
+    } else if (window.innerWidth <= 1280) {
+      return 8;
     }
-    else {
-        items = 8;
+  }
+
+  function initializeCardsPerPage() {
+    if (window.innerWidth <= 658) {
+      return 3;
+    } else if (window.innerWidth <= 1280) {
+      return 6;
+    } else {
+      return 8;
     }
-    return items;
- }
+  }
+
+  function debounce(func, delay) {
+    let timeout;
+    return function (...args) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        func.apply(this, args);
+      }, delay);
+    };
+  }
+
+  function initializePagination() {
+    let copies = initializeCardsCopies();
+    cardsPerPage = initializeCardsPerPage();
+    console.log(cardsPerPage);
+    mixedCards = mixCards(petsData, copies);
+    mixedCards = [].concat(...mixedCards);
+    console.log(mixedCards);
+
+    num_of_pages = Math.ceil(mixedCards.length / cardsPerPage);
+    console.log(num_of_pages);
+    showPage(1);
+  }
+
+  const debouncedInitPagination = debounce(initializePagination, 300);
+
+  window.addEventListener(
+    "resize",
+    function () {
+      debouncedInitPagination();
+    },
+    true
+  );
 });
